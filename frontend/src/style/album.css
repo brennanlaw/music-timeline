@@ -1,0 +1,64 @@
+/* https://www.quackit.com/html/html_editors/scratchpad/?example=/css/grid/examples/cards_auto-fill_align-items_stretch */
+.albums_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    align-items: stretch;
+}
+
+.album_item {
+    border: 1px solid grey;
+    fill-opacity: initial;
+}
+
+.album_item_img{
+    max-width: 100%;
+}
+
+.album_info{
+    text-align: center;
+    padding: 10px;
+}
+
+.album_title{
+    font-size: medium;
+}
+
+.album_artist{
+    font-size: smaller;    
+}
+
+/* https://www.youtube.com/watch?v=i8fAO_zyFAM */
+.album_details_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0,0,0,0.5);
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.album_details {
+    position: relative;
+    padding: 60px;
+    width: 100%;
+    max-width: 800px;
+    max-height: 80%;
+    background-color: rgb(35, 35, 44);
+}
+
+.album_details_close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+}
+
+iframe {
+    width: 100%;
+    max-height: 500px;
+}
+

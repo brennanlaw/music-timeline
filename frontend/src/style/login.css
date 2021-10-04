@@ -1,0 +1,20 @@
+.login_form {
+    display:flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 100px;
+    max-width: 400px;
+}
+
+.login_input {
+   margin-bottom: 10px;
+}
+
+.login_form_buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.sign_button {
+    margin: 10px;;
+}

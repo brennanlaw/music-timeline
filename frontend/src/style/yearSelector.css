@@ -1,0 +1,19 @@
+.year_selector {
+    display:flex;
+    flex-flow: wrap;
+    padding-top: 20px;
+}
+
+.year_button {
+    flex-grow: 1;
+    border: 1px solid black;
+    min-height:30px;
+}
+
+.year_selector button:hover {
+    background-color: rgb(160, 160, 160);
+    cursor: pointer;
+}
+
+
+

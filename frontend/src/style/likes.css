@@ -1,0 +1,87 @@
+.edit_likes_container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    padding-right: 15px;
+}
+
+.search_results_header{
+    display: flex;
+    align-items: center;
+}
+
+.add_like_form {
+    display: flex;
+    align-items: center;
+}
+
+.artist_lists_container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.artist_list {
+    display:flex;
+    flex-direction: column; 
+    width: 100%;
+    max-width: 45%;
+}
+
+.artist_container {
+    margin-top:20px;
+    border-bottom: 1px solid grey;
+}
+
+.artist {
+    display:flex;
+    justify-content: space-between;
+}
+
+.artist_info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.artist_picture {
+    border-radius: 50%;
+    width: 100px;
+}
+
+.artist_headers {
+    padding-left: 50px;
+}
+
+.artist_options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.update_button_container {
+    display: flex;
+    justify-content: center;
+}
+
+.update_button {
+    color: white;
+    font-weight: bold;
+    background-color:green;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    border-radius: 5%;
+    width: 50%;
+}
+
+.update_button:hover {
+    background-color:rgb(0, 150, 0);
+    cursor: pointer;
+}
