@@ -8,7 +8,7 @@
 ## Application Description
 
 Welcome to Music Timeline, an album exploration and music discovery tool where users can browse through albums organized in an interactive and customized timeline. 
-Each user's timeline is tailored to them, meaning the albums that appear on their timeline is based on a combination of their liked artists and reccomended artists based on liked artists.
+Each user's timeline is tailored to them, meaning the albums that appear on their timeline is based on a combination of their liked artists and recomended artists based on liked artists.
 
 ### App URL
 [https://bnt-cscc09.herokuapp.com](https://bnt-cscc09.herokuapp.com)
