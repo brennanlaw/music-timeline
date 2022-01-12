@@ -45,32 +45,38 @@ module.exports = {
     },
 
     getArtist: async function (artistId, callback) {
-        await fetch("https://api.deezer.com/artist/" + artistId)
-            .then(res => {
-                if (!res.ok) callback("Fetch fail", null);
-                return res.json();
-            })
-            .then(data => (data.error) ? callback("Deezer artist ID not found", null) : callback(null, data))
-            .catch(err => callback(err, null));
+        try {
+            let res = await fetch("https://api.deezer.com/artist/" + artistId);
+            if (!res.ok) callback("[" + res.status + "] " + res.statusText, null);
+            let data = await res.json();
+            if (data.error) callback("Deezer artist ID not found", null);
+            callback(null, data);
+        } catch(err) {
+            callback(err, null);
+        }
     },
 
     getAlbumInfo: async function (albumId, callback) {
-        await fetch("https://api.deezer.com/album/" + albumId)
-            .then(res => {
-                if (!res.ok) callback("Fetch fail", null);
-                return res.json();
-            })
-            .then(data => (data.error) ? callback("Deezer album ID not found", null) : callback(null, data))
-            .catch(err => callback(err, null));
+        try {
+            let res = await fetch("https://api.deezer.com/album/" + albumId);
+            if (!res.ok) callback("[" + res.status + "] " + res.statusText, null);
+            let data = await res.json();
+            if (data.error) callback("Deezer album ID not found", null);
+            callback(null, data);
+        } catch(err) {
+            callback(err, null);
+        }
     },
 
     getSearchResults: async function (searchName, callback) {
-        await fetch("https://api.deezer.com/search/artist?q=" + searchName)
-            .then(res => {
-                if (!res.ok) callback("Fetch fail", null);
-                return res.json();
-            })
-            .then(data => (data.total==0) ? callback("No search results", null) : callback(null, data.data.slice(0,3)))
-            .catch(err => callback(err, null));
+        try {
+            let res = await fetch("https://api.deezer.com/search/artist?q=" + searchName);
+            if (!res.ok) callback("[" + res.status + "] " + res.statusText, null);
+            let data = await res.json();
+            if (data.total==0) callback("No search results", null);
+            callback(null, data.data.slice(0,3));
+        } catch(err) {
+            callback(err, null);
+        }
     }
 };
